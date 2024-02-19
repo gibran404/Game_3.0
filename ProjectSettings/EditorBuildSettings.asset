@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/0-Start.unity
+    guid: 511b5e3d04b02ed429ad894594737c29
+  - enabled: 1
+    path: Assets/Scenes/1-Desert.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/2-CamelRace.unity
+    guid: c6123f74ab225504f97c44fe3a98164c
+  - enabled: 1
+    path: Assets/Scenes/3-DeasertTown.unity
+    guid: b4fc56b954f5a4a44812a98a288cee1d
+  - enabled: 1
+    path: Assets/Scenes/4-Morris.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/5-Sea.unity
+    guid: 49fa8916a9387d34280221c35fb41098
+  - enabled: 1
+    path: Assets/Scenes/6-TyreRace.unity
+    guid: 8dae8ba929a2bc74c961ed71200fb3d6
+  - enabled: 1
+    path: Assets/Scenes/7-City.unity
+    guid: 9e2ea4eab4a703544b3add9ea877a740
+  - enabled: 1
+    path: Assets/Scenes/8-TagGame.unity
+    guid: 7ff0cc772d868974baccb99b0b19953e
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 49b64597ead35584cae1b9895989ff33
+  m_configObjects: {}
