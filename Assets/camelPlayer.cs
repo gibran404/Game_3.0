@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class camelPlayer : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class camelPlayer : MonoBehaviour
     [SerializeField] private float timeSinceLastPress;
     [SerializeField] private float timeSinceNotPressed;
 
+    public GameObject speedText;
+
 
     void Start()
     {
@@ -30,6 +33,7 @@ public class camelPlayer : MonoBehaviour
 
     void Update()
     {
+        
         if (raceStart.raceStarted == false)
         {
             return;
@@ -45,7 +49,11 @@ public class camelPlayer : MonoBehaviour
             }
             else
             {
-                moveSpeedMultiplier = 2f;
+                moveSpeedMultiplier -= 0.5f;
+                if (moveSpeedMultiplier < 2f)
+                {
+                    moveSpeedMultiplier = 2f;
+                }
             }
             lastSpacePressTime = Time.time;
         }
@@ -55,5 +63,6 @@ public class camelPlayer : MonoBehaviour
         }
 
         rb.velocity = new Vector2(moveSpeed * moveSpeedMultiplier, rb.velocity.y);
+        speedText.GetComponent<Text>().text = "Speed: " + (moveSpeed*moveSpeedMultiplier).ToString("0");
     }
 }

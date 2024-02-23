@@ -30,9 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/7-City.unity
     guid: 9e2ea4eab4a703544b3add9ea877a740
   - enabled: 1
-    path: Assets/Scenes/8-TagGame.unity
-    guid: 7ff0cc772d868974baccb99b0b19953e
+    path: Assets/Scenes/8-Tag.unity
+    guid: 2d396ec68023908499d684877ec4b09f
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 49b64597ead35584cae1b9895989ff33
+  - enabled: 0
+    path: Assets/Scenes/8-TagGame.unity
+    guid: 7ff0cc772d868974baccb99b0b19953e
   m_configObjects: {}

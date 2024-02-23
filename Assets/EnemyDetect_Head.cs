@@ -9,8 +9,13 @@ public class EnemyDetect_Head : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             //destroy parent object
-            Destroy(transform.parent.gameObject);
-            Debug.Log("Player hit head");
+            if (PlayerMovement.alive)
+            {
+                Destroy(transform.parent.gameObject);
+                Debug.Log("Player hit head");
+            }
+
+            
         }
     }
 }

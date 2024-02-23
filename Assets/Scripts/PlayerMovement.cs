@@ -38,10 +38,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        // if alive = false, make spriteboy red
         if (!alive)
         {
+            spriteBoy.color = Color.red;
+            spriteGirl.color = Color.red;
             return;
         }
+        
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
@@ -51,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         }
         UpdateAnimationState();
     }
+
 
     private void UpdateAnimationState()
     {

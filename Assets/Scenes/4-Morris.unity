@@ -646,7 +646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d256612a3982314aa223713dafa2d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PausePanel: {fileID: 253832718}
 --- !u!114 &246229083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4858,6 +4857,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MenuPanels
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017954996486957412, guid: 0d4b2baf0db094242b9a251f07e40277,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622307952622736133, guid: 0d4b2baf0db094242b9a251f07e40277,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

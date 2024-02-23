@@ -17,6 +17,8 @@ public class EnemyDetect_Attack : MonoBehaviour
         {
             PlayerMovement.alive = false;
             deathPanel.SetActive(true);
+            enemyMovement.move = false;
+            Debug.Log("Player hit by enemy");
         }
     }
 
