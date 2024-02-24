@@ -93,7 +93,13 @@ public class AIBehaviour : MonoBehaviour
 
         // 2. Remove other player stone
         if (move.Remove != -1){
+            if (Score.score >= 5)
+                Score.score -= 5;
+            else
+                Score.score = 0;
+
             TextPanel.GetComponent<Text>().text = "Turn: Ai\nRemoving Stone...";
+            
             yield return new WaitForSeconds(1);
             board.RemoveStone(move.Remove);
         }
@@ -103,6 +109,7 @@ public class AIBehaviour : MonoBehaviour
         // 4. Wait for next turn
         move = null;
         TextPanel.GetComponent<Text>().text = "Turn: Player";
+        Score.score += 5;
         state = State.WaitForTurn;
     }
 

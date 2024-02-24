@@ -20,6 +20,15 @@ public class GameOverUI : MonoBehaviour
         {
             canvasGameobject.SetActive(true);
             winLooseText.text = game.Winner == 1 ? "You WON!" : "You LOST!";
+            if (game.Winner == 1)
+            {
+                Score.score += 40;
+            }
+            else if (Score.score >= 40)
+                Score.score -= 40;
+            else
+                Score.score = 0;
+            
         }
     }
 

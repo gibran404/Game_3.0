@@ -12,6 +12,8 @@ public class EnemyDetect_Head : MonoBehaviour
             if (PlayerMovement.alive)
             {
                 Destroy(transform.parent.gameObject);
+                Score.score += 10;
+
                 Debug.Log("Player hit head");
             }
 

@@ -24,6 +24,11 @@ public class StartMenu : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        if (Score.score >= 30)
+            Score.score -= 30;
+        else
+            Score.score = 0;
     }
     public void QuitGame()
     {
@@ -32,6 +37,7 @@ public class StartMenu : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+        Score.score = 0;
     }
     public void Continue()
     {
