@@ -2556,6 +2556,7 @@ MonoBehaviour:
   winPanel: {fileID: 663445992}
   ScorePanel: {fileID: 1208296754}
   HintPanel: {fileID: 33539775}
+  SpeedPanel: {fileID: 494125334}
 --- !u!1 &1255957207
 GameObject:
   m_ObjectHideFlags: 0
