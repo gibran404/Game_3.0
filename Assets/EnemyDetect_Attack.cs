@@ -15,6 +15,11 @@ public class EnemyDetect_Attack : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            if (Score.score >= 10)
+                Score.score -= 10;
+            else
+                Score.score = 0;
+
             PlayerMovement.alive = false;
             deathPanel.SetActive(true);
             enemyMovement.move = false;

@@ -13,6 +13,8 @@ public class FinishLine : MonoBehaviour
 
     public GameObject winPanel;
     public GameObject ScorePanel;
+    public GameObject HintPanel;
+    public GameObject SpeedPanel;
 
     // Start is called before the first frame update
 
@@ -28,30 +30,29 @@ public class FinishLine : MonoBehaviour
             playerWon = false;
             raceStart.raceStarted = false;
         }
-        Win(); 
+        HintPanel.SetActive(false);
+        SpeedPanel.SetActive(false);
+        ScorePanel.SetActive(true);
+        winPanel.SetActive(true);
+        Win();
     }
     public void Win()
     {
         if (playerWon)
         {
             dialogText.GetComponent<Text>().text = "Congratulations you won the Race!\n You can now continue onwards or Retry";
-            winPanel.SetActive(true);
 
             
-            ScorePanel.SetActive(true);
             Score.score += 40;
         }
         if (!playerWon)
         {
-            dialogText.GetComponent<Text>().text = "You Lost the game, Better luck next time!\n You can now continue onwards or Retry";
-            winPanel.SetActive(true);
+            dialogText.GetComponent<Text>().text = "You Lost the race, Better luck next time!\n You can now continue onwards or Retry";
 
-            ScorePanel.SetActive(true);
             if (Score.score >= 20)
                 Score.score -= 20;
             else
                 Score.score = 0;
-            
         }
     }
 

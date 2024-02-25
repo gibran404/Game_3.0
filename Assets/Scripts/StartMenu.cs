@@ -24,11 +24,17 @@ public class StartMenu : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
-        if (Score.score >= 30)
-            Score.score -= 30;
+        if (gamemode == "MiniGame")
+        {
+            if (Score.score >= 30)
+                Score.score -= 30;
+            else
+                Score.score = 0;
+        }
         else
+        {
             Score.score = 0;
+        }
     }
     public void QuitGame()
     {
