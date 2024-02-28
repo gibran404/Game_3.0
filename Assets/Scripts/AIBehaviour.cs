@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NineMensMorris;
@@ -93,8 +93,8 @@ public class AIBehaviour : MonoBehaviour
 
         // 2. Remove other player stone
         if (move.Remove != -1){
-            if (Score.score >= 5)
-                Score.score -= 5;
+            if (Score.score >= 10)
+                Score.score -= 10;
             else
                 Score.score = 0;
 
